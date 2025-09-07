@@ -1,20 +1,23 @@
 #include <stdio.h>
 #include <stdlib.h> // malloc, free
 
-int main(void) {
+int main(void)
+{
     int N, M;
     scanf("%d %d", &N, &M);
-    
+
     // malloc으로 동적 메모리에 길이가 N, M인 int배열 만들기
     int *arr_A = malloc(sizeof(int) * N);
     int *arr_B = malloc(sizeof(int) * M);
 
     // arr A 입력받기
-    for (int i = 0; i < N; i++) {
+    for (int i = 0; i < N; i++)
+    {
         scanf("%d", &arr_A[i]);
     }
     // arr B 입력받기
-    for (int j = 0; j < M; j++) {
+    for (int j = 0; j < M; j++)
+    {
         scanf("%d", &arr_B[j]);
     }
 
@@ -22,23 +25,29 @@ int main(void) {
     int pointer_A = 0, pointer_B = 0;
 
     // 끝까지 가는 애가 생기기 전까지 반복
-    while (pointer_A < N && pointer_B < M) {
+    while (pointer_A < N && pointer_B < M)
+    {
         // a랑 b가 가리키는 것 중 작은 걸 먼저 출력한 후, 포인터를 한칸 앞으로.
-        if (arr_A[pointer_A] <= arr_B[pointer_B]) {
+        if (arr_A[pointer_A] <= arr_B[pointer_B])
+        {
             printf("%d ", arr_A[pointer_A]);
             pointer_A++;
-        } else {
+        }
+        else
+        {
             printf("%d ", arr_B[pointer_B]);
             pointer_B++;
         }
     }
 
     // 끝까지 도달한 애가 뭔지 확인 후, 남은 애를 전부 출력
-    while (pointer_A < N) {
+    while (pointer_A < N)
+    {
         printf("%d ", arr_A[pointer_A]);
         pointer_A++;
     }
-    while (pointer_B < M) {
+    while (pointer_B < M)
+    {
         printf("%d ", arr_B[pointer_B]);
         pointer_B++;
     }
@@ -47,7 +56,6 @@ int main(void) {
     free(arr_B);
 
     return 0;
-
 }
 
 // qsort를 이용해서 python3처럼 풀어낸 경우
