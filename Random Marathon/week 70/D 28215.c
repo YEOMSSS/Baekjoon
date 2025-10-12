@@ -112,3 +112,64 @@ int main(void)
     printf("%d\n", best);
     return 0;
 }
+
+// dfs로 푸는 법도 익혀두자.
+
+/*
+#include <stdio.h>
+
+struct Point {
+    int x, y;
+};
+
+struct Point house[50];   // 최대 50개 집
+int N, K;
+int comb[3];              // 선택된 대피소 인덱스 저장 (최대 3개)
+int best = 200000;        // 정답 초기값
+
+// 절댓값
+int abs_i(int v) { return v < 0 ? -v : v; }
+
+// 맨해튼 거리 계산
+int dist(int i, int j) {
+    return abs_i(house[i].x - house[j].x) + abs_i(house[i].y - house[j].y);
+}
+
+// 선택된 조합(comb[])으로 가장 먼 집까지의 거리 계산
+void evaluate() {
+    int far = 0;
+    for (int h=0; h<N; h++) {
+        int d = 200000;
+        for (int i=0; i<K; i++) {
+            int c = comb[i];
+            int dd = dist(h, c);
+            if (dd < d) d = dd;  // 가장 가까운 대피소 선택
+        }
+        if (d > far) far = d;    // 가장 먼 집 갱신
+    }
+    if (far < best) best = far;  // 최솟값 갱신
+}
+
+// DFS로 조합 생성
+void dfs(int depth, int start) {
+    if (depth == K) {
+        evaluate();
+        return;
+    }
+    for (int i=start; i<N; i++) {
+        comb[depth] = i;         // i번째 집 선택
+        dfs(depth+1, i+1);       // 다음 인덱스부터 탐색 (중복 방지)
+    }
+}
+
+int main(void) {
+    scanf("%d %d", &N, &K);
+    for (int i=0; i<N; i++) {
+        scanf("%d %d", &house[i].x, &house[i].y);
+    }
+
+    dfs(0, 0);
+    printf("%d\n", best);
+    return 0;
+}
+*/
