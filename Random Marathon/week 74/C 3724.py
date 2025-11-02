@@ -1,3 +1,5 @@
+# 이썬이형 도와주오
+
 import sys
 
 input = sys.stdin.readline
