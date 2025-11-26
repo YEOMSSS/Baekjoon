@@ -8,11 +8,11 @@ def main() -> None:
     target = (int(Y / X * 100 + EPS) + 1) * SCALE
 
     # 0 <= Y <= X
-    first = 0
-    last = X
+    left = 0
+    right = X
 
-    while first <= last:
-        win = (first + last) // 2
+    while left <= right:
+        win = (left + right) // 2
         win_rate = int((win + Y) / (win + X) * 100 * SCALE)
         # print(win, win_rate)
 
@@ -21,9 +21,9 @@ def main() -> None:
             return
 
         if win_rate < target:
-            first = win + 1
+            left = win + 1
         else:  # win_rate > target
-            last = win - 1
+            right = win - 1
 
     if win_rate < target:
         win += 1
