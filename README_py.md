@@ -8,25 +8,28 @@
 
 시간제한이 걸리면 PyPy3으로 제출.  
 같은 코드를 PyPy3으로 제출하면 메모리를 python3보다 두배로 먹긴 해도, 두배 빨라진다.  
-PyPy3으로 dfsR 재귀 빡세게 돌리면 메모리 초과가 난다. 이때는 python3로.  
+PyPy3으로 dfsR 재귀 빡세게 돌리면 메모리 초과가 난다. 이때는 python3로.
 
 정렬문제나 그래프문제는 python으로 풀게 되는 감이 있다.  
-나머지는 오히려 c언어가 편한 거 같은데 말이지.  
-
+나머지는 오히려 c언어가 편한 거 같은데 말이지.
 
 # 00. 기타
 
 solved.ac에서 마라톤이나 CLASS를 푼 찌꺼기들
 
+#### dict.get(key, default)
+
+key가 dict에 있으면 value 반환, 없으면 default 반환
+
 #### Counter 모듈 most_common
-dictionary 형태로 작동한다. most_common을 Counter에 사용하면 빈도순으로 출력된다.  
+
+dictionary 형태로 작동한다. most_common을 Counter에 사용하면 빈도순으로 출력된다.
 
     word_counter = Counter(words)
     print(word_counter.most_common(3))
 
     Counter({'python': 3, 'is': 3, 'amazing': 1, 'and': 1, 'fun.': 1, 'powerful.': 1})
     [('python', 3), ('is', 3), ('amazing', 1)]
-
 
 #### min(list, key=함수)
 
@@ -39,17 +42,20 @@ dictionary 형태로 작동한다. most_common을 Counter에 사용하면 빈도
     word_min = (min(words, key=lambda x: x.lower()))
 
 #### bit_count(), bit_length()
+
 2진수로 바꿨을 때 1의 개수를 세주는 n.bit_count()  
 2진수로 바꿀 때 필요한 비트의 개수를 알려주는 n.bit_length()
 
 #### 파이썬 슬라이싱 인덱스
+
 파이썬에서 슬라이싱으로 인덱스를 가져올 땐 인덱스가 초과되어도 괜찮다.  
-다만 단일 인덱스로 가져올 땐 주의.  
+다만 단일 인덱스로 가져올 땐 주의.
 
 `if s == t[i : i + len_s]:` 이런거에선 i + len_s가 len(t)를 뚫어도 괜찮지만
 `if s == t[i + len_s]:` len(t) - 1 보다 크면 인덱스에러가 난다.
 
 #### math.comb & math.perm
+
 comb(N, M)은 nCm이고 (N개중에 M개선택한 조합의 수)  
 perm(N, M)은 nPm이다 (N개중에 M개선택한 순열의 수)
 
@@ -150,6 +156,35 @@ divmod(a, b) 는 (a // b, a % b) 튜플을 반환한다.
 
 c언어도 이제 해야하는데. 자바도 해야하는데. shit!  
 그리디부터는 개강 하고서 하던지 해야겠구만. 내일부턴 c언어를 하자.
+
+26.01.01. 학점 4.5를 받고 중급1에 돌아온 나. 내가 돌아왔다.
+
+#### import heapq
+
+파이썬에서 최소 힙과 최대 힙을 사용할 수 있게 하는 모듈이다.  
+힙 전용 자료구조가 있는 것이 아니므로 `max_heap = []` 로 둔 리스트를 힙 규칙으로 관리한다.  
+파이썬의 heapq는 최소 힙만 다루므로 최대 힙을 사용하고 싶다면 -를 붙여 쓰면 된다.
+
+    최대 힙을 사용하는 경우
+    max_heap = []
+    heapq.heappush(max_heap, -value) # 힙에 value를 push한다.
+    print(-heapq.heappop(max_heap)) # 힙의 최댓값을 pop한다.
+
+#### zip(\*list)
+
+list의 원소들이 열 기준으로 묶인다.
+
+#### from bisect
+
+bisect는 이진탐색으로 들어갈 위치를 찾아주는 모듈이다.  
+bisect_right(a, x), bisect_left(a, x). 각각 정렬된 a에서 x가 들어갈 수 있는 위치를 찾는다.  
+right는 들어갈 수 있는 가장 오른쪽 인덱스를, left는 들어갈 수 있는 가장 왼쪽 인덱스를 반환한다.
+
+    a = [1, 3, 3, 5]
+    bisect.bisect_left(a, 3)  # 1, [1, |3, 3, 5]
+    bisect.bisect_right(a, 3)  # 3, [1, 3, 3, |5]
+
+insort_left(a, x), insort_right(a, x)는 a에서 x로 각각 left, right한 위치에 x를 삽입까지 해준다.
 
 #### XOR 연산 ^
 

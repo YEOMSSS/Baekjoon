@@ -3,9 +3,10 @@
 
 import sys
 
+input = sys.stdin.readline
+
 
 def main():
-    input = sys.stdin.readline
     N, M, K = map(int, input().split())
 
     # 2*2넘기면 불가능
