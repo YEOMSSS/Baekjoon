@@ -17,6 +17,13 @@ PyPy3으로 dfsR 재귀 빡세게 돌리면 메모리 초과가 난다. 이때�
 
 solved.ac에서 마라톤이나 CLASS를 푼 찌꺼기들
 
+#### itertools.groupby(string)
+
+groupby는 연속으로 같은 값들을 묶어주는 함수다.
+
+    for ch, group in groupby(string):
+    print(ch, list(group))
+
 #### dict.get(key, default)
 
 key가 dict에 있으면 value 반환, 없으면 default 반환
