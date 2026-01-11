@@ -1,3 +1,7 @@
+# P5를 찍은 후 제출하도록 하자.
+# 만약 입력이 알파벳만으로 확실하다면 build_pos에서 딕셔너리 대신 26짜리 리스트를 만드는 것도 고려
+
+
 def build_pos(B):
     pos = {}
     for i, c in enumerate(B):
