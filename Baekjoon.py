@@ -1,5 +1,5 @@
 # Authored by : marigold2003
-# Date : 2026-01-31
+# Date : 2026-02-01
 # Link : https://www.acmicpc.net/problem/00000
 
 import sys
