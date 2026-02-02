@@ -1,6 +1,6 @@
 # Authored by : marigold2003
-# Date : 2026-02-01
-# Link : https://www.acmicpc.net/problem/00000
+# Date : 2026-02-03
+# Link : https://www.acmicpc.net/problem/00000000000000000000000000
 
 import sys
 
@@ -12,7 +12,7 @@ input = sys.stdin.readline
 #
 
 
-def main():
+def main() -> None:
 
     # [Ideas]
 
