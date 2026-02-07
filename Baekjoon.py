@@ -1,6 +1,7 @@
 # Authored by : marigold2003
-# Date : 2026-02-06
+# Date : 2026-02-08
 # Link : https://www.acmicpc.net/problem/00000000000000000000000000
+
 
 import sys
 
