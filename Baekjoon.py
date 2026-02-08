@@ -1,5 +1,5 @@
 # Authored by : marigold2003
-# Date : 2026-02-08
+# Date : 2026-02-09
 # Link : https://www.acmicpc.net/problem/00000000000000000000000000
 
 
@@ -8,7 +8,7 @@ import sys
 input = sys.stdin.readline
 
 
-# [Summary]
+# [Summary] 제목
 
 #
 
