@@ -4,28 +4,48 @@ input = sys.stdin.readline
 
 
 class Clock:
-    def __init__(self):
-        self.date = 0
-        self.hour = 0
-        self.minute = 0
+    def __init__(self, hour=0, minute=0, second=0, date=0):
+        self.hour = hour
+        self.minute = minute
+        self.second = second
+
+        self.date = date
 
     def add_minute(self, m):
         self.minute += m
 
-        # 60초가 넘으면 분으로 올림
+        # 60분가 넘으면 시로 올림
         if self.minute >= 60:
             self.hour += self.minute // 60
             self.minute %= 60
 
-        # 60분이 넘으면 일로 올림
+        # 24시가 넘으면 일로 올림
+        if self.hour >= 24:
+            self.date += self.hour // 24
+            self.hour %= 24
+
+    def add_second(self, m):
+        self.second += m
+
+        # 60초가 넘으면 분으로 올림
+        if self.second >= 60:
+            self.minute += self.second // 60
+            self.second %= 60
+
+        # 60분이 넘으면 시로 올림
+        if self.minute >= 60:
+            self.hour += self.minute // 60
+            self.minute %= 60
+
+        # 24시가 넘으면 일로 올림
         if self.hour >= 24:
             self.date += self.hour // 24
             self.hour %= 24
 
     def curr(self):
-        return f"{self.hour:02}:{self.minute:02}"
+        return f"{self.hour:02}:{self.minute:02}:{self.second:02}"
 
-    # 이건 완전 자바같네. 오버라이딩 맛이 난다? 이 코드에선 필요없긴함. print(Clock)에 발동
+    # print(Clock)에 발동, java오버라이딩같은 느낌
     def __str__(self):
         return self.curr()
 
