@@ -1,5 +1,5 @@
 # Authored by : marigold2003
-# Date : 2026-02-11
+# Date : 2026-02-12
 # Link : https://www.acmicpc.net/problem/00000000000000000000000000
 
 
