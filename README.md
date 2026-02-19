@@ -14,7 +14,8 @@
 2025.11.03 600 solve !!!!! Gold I 1490  
 2025.12.12 700 solve !!!!! Gold I 1514  
 2026.01.17 Platinum V 달성 feat. 801.271_1517  
-2026.01.18 800 solve !!!!! Platinum V 1627
+2026.01.18 800 solve !!!!! Platinum V 1627  
+2026.02.18 900 solve !!!!! Platinum V 1698 ps갤컵3 싸이버거 당첨!!
 
 # python 주요 코드
 
