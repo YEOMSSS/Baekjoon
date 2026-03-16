@@ -1,5 +1,7 @@
 # BAEKJOON
 
+2025.04.15 print("Hello, Baekjoon!")
+2025.04.29 print("Hello, Solved!")
 2025.05.13 100 solve !!!!!  
 2025.05.17 CLASS 1++  
 2025.05.20 CLASS 2  
@@ -17,6 +19,10 @@
 2026.01.18 800 solve !!!!! Platinum V 1627  
 2026.02.18 900 solve !!!!! Platinum V 1698 ps갤컵3 싸이버거 당첨!!  
 2026.02.24 OVER RATING 12000 달성 !!!!!
+
+# SWEA
+
+2026.03.04 print("Hello, SWEA!")
 
 # python 주요 코드
 
