@@ -1,6 +1,1 @@
-import sys
-
-
-print(int("a", 36))
-
-print(sys.maxsize)
+print(len("1111111111111111111111111111111111111111"))
