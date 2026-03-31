@@ -20,7 +20,9 @@
 2026.02.18 900 solve !!!!! Platinum V 1698  
 2026.02.24 OVER RATING 12000 달성 !!!!!  
 2026.03.19 OVER RATING 13000 달성 !!!!!  
-2026.03.20 1000 solve !!!!! Platinum V 1726
+2026.03.20 1000 solve !!!!! Platinum V 1726  
+2026.03.30 CLASS 5  
+2026.03.30 Platinum IV 달성
 
 # guitar
 
