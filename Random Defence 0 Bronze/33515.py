@@ -1,6 +1,6 @@
 # Authored by : marigold2003
-# Date : 2026-04-23
-# Link : https://www.acmicpc.net/problem/34052
+# Date : 2026-04-24
+# Link : https://www.acmicpc.net/problem/33515
 
 
 import sys
@@ -8,21 +8,21 @@ import sys
 input = sys.stdin.readline
 
 
-# [Summary] 체육은 수학과목 입니다 2
+# [Summary] 노트북 세 대를 가지고 왔다
 
-# 입력 4회를 합쳐 1500보다 작으면 성공.
+# 두 입력 중 작은 것을 출력하시오.
 
 
 def main() -> None:
 
     # [Ideas]
 
-    # 그렇습니다.
+    # 대회도 나가보고 싶긴 하네.
 
     ##########
 
-    temp = sum(int(input()) for _ in range(4))
-    print("No" if temp > 1500 else "Yes")
+    small = min(map(int, input().split()))
+    print(small)
 
     ##########
 
@@ -31,7 +31,7 @@ def main() -> None:
 
 # [Review]
 
-# 이런, 시간이 지나버렸어.
+# 내일 모레면 끝이구나
 
 
 if __name__ == "__main__":
