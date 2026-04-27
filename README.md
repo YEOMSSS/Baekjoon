@@ -22,7 +22,8 @@
 2026.03.19 OVER RATING 13000 달성 !!!!!  
 2026.03.20 1000 solve !!!!! Platinum V 1726  
 2026.03.30 CLASS 5  
-2026.03.30 Platinum IV 달성
+2026.03.30 Platinum IV 달성  
+2026.04.26 print("Good Bye, BOJ!")
 
 # guitar
 
